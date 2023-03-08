@@ -11,47 +11,32 @@ function Homepage() {
                   <div className={styles.record}>
                       <h5>Nat King Cole</h5>
                       <p>Album: Cole Español</p>
-                      <br />
-                      <img
-                          src="https://upload.wikimedia.org/wikipedia/en/8/86/NatKingCole_Unforgettable_Capitol10inch.jpg"
-                          alt=""
-                      />
+                      <img src="https://upload.wikimedia.org/wikipedia/en/8/86/NatKingCole_Unforgettable_Capitol10inch.jpg" alt=""/>
                       <div className={styles.center}>
-                          <a href="#" className={styles.text}>
-                              <span />
-                              Details
-                          </a>
+                          <a href="#" className={styles.text}><span />Details</a>
                       </div>
                   </div>
-                  
+
                   <div className={styles.record}>
                       <h5>Nat King Cole</h5>
                       <p>Album: Cole Español</p>
-                      <br />
-                      <img
-                          src="https://upload.wikimedia.org/wikipedia/en/8/86/NatKingCole_Unforgettable_Capitol10inch.jpg"
-                          alt=""
-                      />
+                      <img src="https://upload.wikimedia.org/wikipedia/en/8/86/NatKingCole_Unforgettable_Capitol10inch.jpg" alt=""/>
                       <div className={styles.center}>
-                          <a href="#" className={styles.text}>
-                              <span />
-                              Details
-                          </a>
+                          <a href="#" className={styles.text}><span />Details</a>
                       </div>
                   </div>
+                  
+
 
               </div>
           </div>
           <div className={styles.row}>
               <div className={styles.col}>
                   <h1>RECORD ME</h1>
-                  <br />
                   <p>
                       Show your passion for vinyl records to the wolrd.
-                      <br />
                       Share your collection and get in touch with other vinyl lovers.
                   </p>
-                  <br />
                   <div>
                       <button className={styles.homebutton} type="button">
                           <span className={styles.home} /> JOIN NOW{" "}
@@ -63,7 +48,7 @@ function Homepage() {
                   </div>
               </div>
 
-              
+
               <div className={styles.col}>
 {/* 
 
@@ -80,7 +65,6 @@ function Homepage() {
                   <div className={styles.record}>
                       <h5>Nat King Cole</h5>
                       <p>Album: Cole Español</p>
-                      <br />
                       <img
                           src="https://upload.wikimedia.org/wikipedia/en/8/86/NatKingCole_Unforgettable_Capitol10inch.jpg"
                           alt=""
@@ -97,7 +81,6 @@ function Homepage() {
                   <div className={styles.record}>
                       <h5>Nat King Cole</h5>
                       <p>Album: Cole Español</p>
-                      <br />
                       <img
                           src="https://upload.wikimedia.org/wikipedia/en/8/86/NatKingCole_Unforgettable_Capitol10inch.jpg"
                           alt=""

@@ -38,11 +38,11 @@
 
 .row{
     display: flex;
-    height: 30vh;
+    height: 34vh;
     width: 150vh;
     color: white;
     align-items: center;
-    transform: translateY(50px);
+    transform: translateY(140px);
 
 }
 
@@ -56,7 +56,7 @@
   background-color: linear-gradient(rgba(216, 196, 196, 0.5), rgba(43, 42, 42, 0.5));
   border-radius: 30px;
   width: 200px;
-  height: 220px;
+  height: 250px;
   display: inline-block;
   border-radius: 10px;
   padding: 15px 25px;
@@ -73,18 +73,22 @@
   height: 150px;
   object-fit: cover;
   transition: 0.5s ease;
+  position: relative;
 }
 
 .record p{
   box-sizing: border-box;
   text-align: left;
   font-size: 0.7rem;
+  padding: 0px;
   
 }
 
 .record h5{
   text-align: left;
   font-size: 1rem;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 
@@ -165,4 +169,8 @@
 
 .main{
   position: absolute;
+}
+
+.col h1{
+    padding: 0;
 }
