@@ -1,5 +1,8 @@
 import styles from "../components/Register.module.css";
 
+import {singInWithGoogle, singIn, logOut} from "../authService/firebaseAuthService"
+import { useState } from "react";
+
 function Register() {
   return (
     <div className={styles.hero}>
