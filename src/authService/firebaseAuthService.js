@@ -1,19 +1,26 @@
 import { auth, googleProvider } from "../server/fire-base configuration"
-import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 
-  console.log(auth?.currentUser);
 
 export const singInWithGoogle = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+     const user= await signInWithPopup(auth, googleProvider);
+     return user
+     
     } catch (err) {
-      console.error(err);
+      console.error(err.message);
     }
   };
 
-export const singIn = async (email, password) => {
+export const singIn = async (email, password, rePassword) => {
     try {
+
+      if(password !== rePassword){
+        throw new Error (`Passwords do not match!`)
+      }
+
       await createUserWithEmailAndPassword(auth, email, password);
+
     } catch (err) {
       console.error(err);
     }
