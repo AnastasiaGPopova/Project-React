@@ -13,6 +13,7 @@ import { useState } from 'react';
 function App() {
   let isLogged = false
 
+
   const [authUser, setAuthUser] = useState({})
   onAuthStateChanged(auth, (currentUser) => {
     setAuthUser(currentUser)

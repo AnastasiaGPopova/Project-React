@@ -1,6 +1,20 @@
 import styles from "../components/Homepage.module.css";
+import { useNavigate } from 'react-router-dom';
 
 function Homepage() {
+
+    const navigation = useNavigate()
+
+   function joinNowClick(){
+    navigation("/register")
+    }
+
+    function seeCatalog(){
+        navigation("/catalog")
+        }
+
+
+
   return (
       <main>
           <div className={styles.row}>
@@ -38,10 +52,10 @@ function Homepage() {
                       Share your collection and get in touch with other vinyl lovers.
                   </p>
                   <div>
-                      <button className={styles.homebutton} type="button">
+                      <button className={styles.homebutton} type="button" onClick={joinNowClick}>
                           <span className={styles.home} /> JOIN NOW{" "}
                       </button>
-                      <button className={styles.homebutton} type="submit">
+                      <button className={styles.homebutton} type="submit" onClick={seeCatalog}>
                           {" "}
                           <span className={styles.home} /> SEE CATALOG{" "}
                       </button>
@@ -70,7 +84,7 @@ function Homepage() {
                           alt=""
                       />
                       <div className={styles.center}>
-                          <a href="#" className={styles.text}>
+                          <a href="/12354" className={styles.text}>
                               <span />
                               Details
                           </a>

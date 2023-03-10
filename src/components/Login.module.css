@@ -43,21 +43,17 @@ form{
 }
 
 .hero{
-    padding: 8rem 0;
-    width: 100%;
+    width: 250vh;
     height: 70vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    transform: translateY(150px);
+    transform: translateY(140px);
 }
 
 form{
     width: 150%;
     max-width: 600px;
-    /* border: 2px solid #5aa8a0 ;
-    border-radius: 25px; */
-
+    align-items: center;
 
 }
 
@@ -100,3 +96,39 @@ input:focus+label{
 }
 
 
+.errorMsg{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    border: 3px solid white;
+    border-style: dashed;
+    background-color:transparent;
+    transform: translateX(350px);
+    padding: 10px;
+    margin: 20px;
+    box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.errorMsg h1{
+    color: white;
+    padding: 0px;
+}
+.errorMsg p{
+    color: white;
+    padding: 3px;
+    word-break: normal;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.noaccount{
+    color: white;
+    transform: translateX(70px);
+}
+
+.noaccount a{
+    color: white;
+}

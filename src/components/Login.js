@@ -2,15 +2,25 @@ import styles from "../components/Login.module.css";
 import {singIn, singInWithGoogle} from "../authService/firebaseAuthService"
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import {errorMessageHandler} from '../errorHandler/errorMiddleware'
 
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessages, setErrorMessages] = useState(null)
 
  async function onLoginClick(){
-    const user = await singIn(email, password)
-    navigate("/")
+    const response = await singIn(email, password)
+
+    if(response.hasOwnProperty("message")){
+      let errors = errorMessageHandler(response.message)
+      setErrorMessages(errors)
+    }
+    if(response.hasOwnProperty("user")){
+      navigate("/")
+    }
+
   }
 
 
@@ -21,8 +31,15 @@ function Login() {
 
   return (
     <>
-      {/* Hello world */}
       <div className={styles.hero}>
+
+      {errorMessages && (
+              <div className={styles.errorMsg}>
+              <h1> Error Message:</h1>
+              <p>{errorMessages}</p>
+            </div>
+      )}
+
         <form action="" method="">
           <div className={styles.registerbox}>
             <label htmlFor="email">
@@ -60,6 +77,7 @@ function Login() {
             <span />
             LOGIN WITH GOOGLE{" "}
           </button>
+          <p className={styles.noaccount}>Don't have an account ? <a href="/register">Create one</a></p>
         </form>
       </div>
     </>
