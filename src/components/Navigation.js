@@ -1,5 +1,5 @@
 import styles from '../components/Navigation.module.css';
-import {singInWithGoogle, singIn, logOut} from "../authService/firebaseAuthService"
+import {logOut} from "../authService/firebaseAuthService"
 
 
 function Navigation({isLogged}){

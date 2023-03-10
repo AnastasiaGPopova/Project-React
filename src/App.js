@@ -6,8 +6,8 @@ import Homepage from './components/Homepage';
 import Login from './components/Login';
 import Navigation from './components/Navigation';
 import Register from './components/Register';
-import { auth, googleProvider } from "./server/fire-base configuration"
-import { createUserWithEmailAndPassword, signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import { auth } from "./server/fire-base configuration"
+import { onAuthStateChanged } from "firebase/auth";
 import { useState } from 'react';
 
 function App() {
